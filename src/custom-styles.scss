@@ -1,0 +1,90 @@
+@use 'sass:map';
+@use '~@angular/material' as mat;
+
+$green-primary: (
+  50: #e6f4ea,
+  100: #c3e4cc,
+  200: #9ed2ac,
+  300: #76c18c,
+  400: #59b474,
+  500: #3ba85d,
+  600: #339953,
+  700: #2a8747,
+  800: #22763d,
+  900: #15572a,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: rgba(black, 0.87),
+    600: rgba(black, 0.87),
+    700: rgba(black, 0.87),
+    800: rgba(black, 0.87),
+    900: rgba(black, 0.87),
+  )
+);
+
+$boysenberry-primary: (
+  50: #fae6f2,
+  100: #f4c1de,
+  200: #f198c9,
+  300: #ef70b2,
+  400: #ed529f,
+  500: #ef378b,
+  600: #dc3586,
+  700: #c5327e,
+  800: #af2f77,
+  900: #872a6a,
+  contrast: (
+          50: rgba(black, 0.87),
+          100: rgba(black, 0.87),
+          200: rgba(black, 0.87),
+          300: rgba(black, 0.87),
+          400: rgba(black, 0.87),
+          500: rgba(black, 0.87),
+          600: rgba(black, 0.87),
+          700: rgba(black, 0.87),
+          800: rgba(black, 0.87),
+          900: rgba(black, 0.87),
+  )
+);
+
+$teal-primary: (
+        50: #e1f2f0,
+        100: #b5ded8,
+        200: #86cac0,
+        300: #5ab4a7,
+        400: #3ea494,
+        500: #2e9482,
+        600: #2a8776,
+        700: #267767,
+        800: #216758,
+        900: #1a4b3e,
+        contrast: (
+                50: rgba(black, 0.87),
+                100: rgba(black, 0.87),
+                200: rgba(black, 0.87),
+                300: rgba(black, 0.87),
+                400: rgba(black, 0.87),
+                500: rgba(black, 0.87),
+                600: rgba(black, 0.87),
+                700: rgba(black, 0.87),
+                800: rgba(black, 0.87),
+                900: rgba(black, 0.87),
+        )
+);
+
+$my-green-primary: mat.define-palette($green-primary, 500);
+$my-teal-accent: mat.define-palette($teal-primary, 500);
+$my-boysenberry-warn: mat.define-palette($boysenberry-primary, 500);
+
+$my-light-theme: mat.define-light-theme((
+        color: (
+                primary: $my-green-primary,
+                accent: $my-teal-accent,
+                warn: $my-boysenberry-warn,
+        )
+));
+

@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@use 'sass:map';
+@use '~@angular/material' as mat;
+@use './custom-styles';
+
+@include mat.core();
+
+@include mat.all-component-themes(custom-styles.$my-light-theme);
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+$color-config: mat.get-color-config(custom-styles.$my-light-theme);
+$primary-palette: map.get($color-config, 'primary');
+
+
+a {
+  color: mat.get-color-from-palette($primary-palette, 900);
+  cursor: pointer;
+  text-decoration: underline;
+}
