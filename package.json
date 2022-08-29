@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "generate": "graphql-codegen --watch"
   },
   "private": true,
   "dependencies": {
@@ -20,6 +21,13 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "@apollo/client": "^3.0.0",
+    "@graphql-codegen/cli": "^2.11.8",
+    "@graphql-codegen/schema-ast": "^2.5.1",
+    "@graphql-codegen/typescript-apollo-angular": "^3.5.3",
+    "@graphql-codegen/typescript-operations": "^2.5.3",
+    "apollo-angular": "^3.0.1",
+    "graphql": "^16",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
